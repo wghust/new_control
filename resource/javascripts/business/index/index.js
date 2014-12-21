@@ -15,21 +15,26 @@ $(document).ready(function() {
             } else {
                 $.ajax({
                     type: 'GET',
+                    dataType: 'json',
                     url: 'http://sa.kascend.com/auth/info',
                     success: function(data) {
                         var profile = data.profile;
-                        var show = [];
+                        var show = {
+                            list: []
+                        };
+                        $(".logo").text(data.company);
+                        $(".name").text(data.name);
                         profile.forEach(function(one, index) {
                             var b = {
                                 url: one.url,
                                 title: one.title
                             };
-                            show.push(b);
+                            show.list.push(b);
                         });
                         var template = $("#firstdata").html();
                         Mustache.parse(template);
                         var rendered = Mustache.render(template, show);
-                        $(".con_2 .one_mid ul").html(rendered);
+                        $(".con_1 .one_mid ul").html(rendered);
                         $(".logincontainer").hide();
                         var newpanel = new panel();
                         newpanel._init();
@@ -76,18 +81,20 @@ $(document).ready(function() {
                 dataType: 'json',
                 success: function(data) {
                     var profile = data.profile;
-                    var show = [];
+                    var show = {
+                        list: []
+                    };
                     profile.forEach(function(one, index) {
                         var b = {
                             url: one.url,
                             title: one.title
                         };
-                        show.push(b);
+                        show.list.push(b);
                     });
                     var template = $("#firstdata").html();
                     Mustache.parse(template);
                     var rendered = Mustache.render(template, show);
-                    $(".con_2 .one_mid ul").html(rendered);
+                    $(".con_1 .one_mid ul").html(rendered);
                     $(".logincontainer").hide();
                     var newpanel = new panel();
                     newpanel._init();
@@ -122,6 +129,8 @@ $(document).ready(function() {
                     'background-color': '#3592DD',
                     'color': 'white'
                 });
+                var projectname = $(this).text();
+                $(".con_2 .one_top span").text(projectname);
                 var twourl = $(this).data('src');
                 $.ajax({
                     url: twourl,
@@ -130,13 +139,15 @@ $(document).ready(function() {
                     success: function(callback) {
                         var back = callback;
                         var profile = back.profile;
-                        var show = [];
+                        var show = {
+                            list: []
+                        };
                         profile.forEach(function(one, index) {
                             var b = {
                                 url: one.url,
                                 title: one.title
                             };
-                            show.push(b);
+                            show.list.push(b);
                         });
                         var template = $("#firstdata").html();
                         Mustache.parse(template);
