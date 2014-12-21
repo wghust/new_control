@@ -69,6 +69,7 @@ $(document).ready(function() {
                 password: _gthis.password
             };
             $.ajax({
+                type: 'POST',
                 url: 'http://sa.kascend.com/auth/login',
                 data: data,
                 dataType: 'json',
