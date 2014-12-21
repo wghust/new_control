@@ -173,6 +173,8 @@ $(document).ready(function() {
                     'color': 'white'
                 });
                 var url = $(this).data('src');
+                var projectname = $(this).text();
+                $(".con_3 .one_top span").text(projectname);
                 _pthis._shownext(2);
             });
         },
