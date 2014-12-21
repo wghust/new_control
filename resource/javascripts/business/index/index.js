@@ -177,6 +177,7 @@ $(document).ready(function() {
                 $(".output").attr({
                     'src': url
                 });
+                output.window.scroll(0, 99999)
             });
         },
         _shownext: function(state) {
