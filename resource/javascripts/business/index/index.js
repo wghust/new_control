@@ -128,14 +128,8 @@ $(document).ready(function() {
         },
         _op: function() {
             $(".con_1 .one_mid ul li").click(function() {
-                $(".con_1 .one_mid ul li").css({
-                    'background-color': 'white',
-                    'color': 'black'
-                });
-                $(this).css({
-                    'background-color': '#3592DD',
-                    'color': 'white'
-                });
+                $(".con_1 .one_mid ul li").removeClass('active');
+                $(this).addClass('active');
                 var projectname = $(this).text();
                 $(".con_2 .one_top span").text(projectname);
                 var twourl = $(this).data('src');
@@ -171,14 +165,8 @@ $(document).ready(function() {
         },
         _nextop: function() {
             $(".con_2 .one_mid ul li").click(function() {
-                $(".con_2 .one_mid ul li").css({
-                    'background-color': 'white',
-                    'color': 'black'
-                });
-                $(this).css({
-                    'background-color': '#3592DD',
-                    'color': 'white'
-                });
+                $(".con_2 .one_mid ul li").removeClass('active');
+                $(this).addClass('active')
                 var url = $(this).data('src');
                 var projectname = $(this).text();
                 $(".con_3 .one_top span").text(projectname);
