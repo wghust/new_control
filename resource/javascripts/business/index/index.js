@@ -13,6 +13,7 @@ $(document).ready(function() {
             if (sa == '' || sa == null) {
                 _gthis._glogin();
             } else {
+                $(".logincontainer").hide();
                 $.ajax({
                     type: 'GET',
                     dataType: 'json',
@@ -35,7 +36,6 @@ $(document).ready(function() {
                         Mustache.parse(template);
                         var rendered = Mustache.render(template, show);
                         $(".con_1 .one_mid ul").html(rendered);
-                        $(".logincontainer").hide();
                         var newpanel = new panel();
                         newpanel._init();
                     },
@@ -46,6 +46,7 @@ $(document).ready(function() {
             }
         },
         _glogin: function() {
+            $(".logincontainer").show();
             _gthis._op();
         },
         _op: function() {
