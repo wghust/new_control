@@ -174,6 +174,9 @@ $(document).ready(function() {
                 var projectname = $(this).text();
                 $(".con_3 .one_top span").text(projectname);
                 _pthis._shownext(2);
+                $(".output").attr({
+                    'src': url
+                });
             });
         },
         _shownext: function(state) {
