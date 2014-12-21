@@ -190,12 +190,14 @@ a {
 }
 .con_3 .one_mid {
 	height: 500px;
-	overflow: hidden;
+	overflow: auto;
 }
 .con_3 .one_mid .output {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 100%;
-	min-height: 500px;
+	width: 98%;
+	margin-left: 1%;
+	border: none;
+	min-height: 495px;
 }
