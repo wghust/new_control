@@ -1,0 +1,73 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-size: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	background-color: #F2F2F2;
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.clear {
+	clear: both;
+}
+
+/*container*/
+.container {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.loginpanel {
+	width: 500px;
+	position: relative;
+	margin: 0 auto;
+	border-radius: 5px;
+	border: 1px solid #e0e0e0;
+	background-color: white;
+	/*border: 1px solid white;*/
+}
+.loginpanel .panel_top {
+	padding: 10px;
+	text-align: center;
+	font-size: 20px;
+}
+.loginpanel .panel_mid {
+	padding: 10px;
+	text-align: center;
+}
+.loginpanel .panel_mid .username {
+	padding: 5px 10px;
+	width: 200px;
+	outline: 0;
+	margin-bottom: 20px;
+}
+.loginpanel .panel_mid .password {
+	padding: 5px 10px;
+	width: 200px;
+	outline: 0;
+}
+.loginpanel .panel_footer {
+	padding: 10px;
+	text-align: center;
+}
+.loginpanel .panel_footer .loginbtn {
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 1px solid #e0e0e0;
+	background-color: white;
+	cursor: pointer;
+	outline: 0;
+}
+.loginpanel .panel_footer .loginbtn:hover {
+	background-color: #5bb793;
+	color: white;
+}
+
