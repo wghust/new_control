@@ -6,7 +6,77 @@
 	<link rel="stylesheet" type="text/css" href="./resource/css/style.css">
 </head>
 <body>
-
+	<div class="header">
+		<div class="container">
+			<div class="logo">
+				CONTROL
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="bigcontainer">
+		<div class="onecontainer con_1" data-state="0">
+			<div class="one_top">
+				<span>应用更新</span>
+			</div>
+			<div class="one_mid">
+				<ul>
+					
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="one_footer">
+				
+			</div>
+		</div>
+		<div class="onecontainer con_2" data-state="0">
+			<div class="one_top">
+				<span>项目</span>
+			</div>
+			<div class="one_mid">
+				<ul>
+					
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="one_footer"></div>
+		</div>
+		<div class="onecontainer con_3">
+			<div class="one_top">
+				<span>项目</span>
+			</div>
+			<div class="one_mid">
+				
+			</div>
+			<div class="one_footer"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="logincontainer">
+		<div class="container">
+			<div class="loginpanel">
+				<div class="panel_top">
+					<span>登录</span>
+				</div>
+				<div class="panel_mid">
+					<input type="text" class="username" placeholder="用户名"><br>
+					<input type="password" class="password" placeholder="密码">
+				</div>
+				<div class="panel_footer">
+					<input type="button" class="loginbtn" value="登录">
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+<script id="firstdata" type="x-tmpl-mustache">
+	{{#list}}
+		<li data-src="{{url}}">{{title}}</li>
+	{{/list}}
+</script>
 <script type="text/javascript" src="./resource/javascripts/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="./resource/javascripts/lib/jquery.easing.min.js"></script>
+<script type="text/javascript" src="./resource/javascripts/lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="./resource/javascripts/business/login/login.js"></script>
+<script type="text/javascript" src="./resource/javascripts/business/index/index.js"></script>
 </html>
