@@ -91,6 +91,8 @@ $(document).ready(function() {
                         };
                         show.list.push(b);
                     });
+                    $(".logo").text(data.company);
+                    $(".name").text(data.name);
                     var template = $("#firstdata").html();
                     Mustache.parse(template);
                     var rendered = Mustache.render(template, show);
