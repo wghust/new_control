@@ -117,6 +117,13 @@ $(document).ready(function() {
             $(".con_3").css({
                 'width': nowwidth
             });
+            $(window).resize(function() {
+                var window_width = $(window).width();
+                var nowwidth = window_width - 460 + 'px';
+                $(".con_3").css({
+                    'width': nowwidth
+                });
+            });
             _pthis._op();
         },
         _op: function() {
