@@ -109,6 +109,7 @@ $(document).ready(function() {
 
     var panel = function() {
         _pthis = this;
+        _pthis.s = null;
     };
     panel.prototype = {
         _init: function() {
@@ -177,7 +178,7 @@ $(document).ready(function() {
                 $(".output").attr({
                     'src': url
                 });
-                output.window.scroll(0, 99999)
+                _pthis._slideshow();
             });
         },
         _shownext: function(state) {
@@ -203,6 +204,19 @@ $(document).ready(function() {
                 default:
                     break;
             }
+        },
+        _slideshow: function() {
+            clearInterval(_pthis.s);
+
+            function sc() {
+                if (srcRun) {
+                    var x = document.getElementById("output").contentWindow.document
+                    x.body.scrollTop = x.body.offsetHeight;
+                }
+            }
+            _pthis.s = setInterval(function() {
+                sc();
+            }, 1000);
         }
     };
     var newlogin = new login();
