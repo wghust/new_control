@@ -180,10 +180,10 @@ $(document).ready(function() {
                     'src': url
                 });
                 _pthis.s = true;
-                $(window).load(function() {
+                window.onbeforeunload = function() {
                     _pthis.s = false;
                     alert("right");
-                });
+                };
             });
         },
         _shownext: function(state) {
