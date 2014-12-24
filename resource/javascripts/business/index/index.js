@@ -182,6 +182,7 @@ $(document).ready(function() {
                 _pthis.s = true;
                 $(window).load(function() {
                     _pthis.s = false;
+                    alert("right");
                 });
             });
         },
