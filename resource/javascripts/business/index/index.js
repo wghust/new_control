@@ -180,7 +180,7 @@ $(document).ready(function() {
                     'src': url
                 });
                 _pthis.s = true;
-                window.onload(function() {
+                $(window).load(function() {
                     _pthis.s = false;
                 });
             });
@@ -216,7 +216,7 @@ $(document).ready(function() {
                     x.body.scrollTop = x.body.offsetHeight;
                 }
             }
-            _pthis.s = setInterval(function() {
+            setInterval(function() {
                 sc();
             }, 1000);
         }
