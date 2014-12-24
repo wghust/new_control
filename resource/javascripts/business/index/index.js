@@ -180,9 +180,10 @@ $(document).ready(function() {
                     'src': url
                 });
                 _pthis.s = true;
-                window.onbeforeunload = function() {
+                document.getElementById("output").contentWindow.onload = function() {
                     _pthis.s = false;
-                    alert("right");
+                    console.log("right");
+                    // alert("right");
                 };
             });
         },
